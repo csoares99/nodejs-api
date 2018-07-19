@@ -1,2 +1,4 @@
 # first-node-api
-Estou desenvolvendo essa api para meus estudos 
+Essa api está sendo desenvolvida para meus estudos
+
+This api is being developed for my studies
