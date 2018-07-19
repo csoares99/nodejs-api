@@ -1,0 +1,22 @@
+{
+  "name": "api-base",
+  "version": "1.0.0",
+  "description": "an api for studies",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cesar soares",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.5.2",
+    "typescript": "^2.9.2"
+  }
+}
