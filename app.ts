@@ -23,7 +23,7 @@ class App {
     this.app.use(ApiRoutes);
 
     this.app.route("/").get((req: Request, res: Response) => {
-      res.send({ 'result': 'version 0.0.1' })
+      res.send({ 'result': 'version 0.0.2' })
     });
   }
 }

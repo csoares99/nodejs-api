@@ -1,16 +1,23 @@
 version: '2'
 services: 
-  postgres:
-    image: "postgres:9.4"
-    environment: 
-      POSTGRES_PASSWORD: api_admin
-      POSTGRES_USER: postgre_user
+   postgres:
+      container_name: first-database
+      image: postgres
+      environment:
+        - POSTGRES_USER=first
+        - POSTGRES_PASSWORD=first123
+        - POSTGRES_DB=first
+      volumes:
+        - ".:/usr/app/data"
+      ports: 
+        - 5432:5432
    web:
+      container_name: first-api
       build: .
       ports:
-       - "80:7777"
+       - "3000:3000"
       volumes:
-       - .:/usr/src/app
+       - .:/usr/app
       depends_on:
        - postgres
-      command: ["./wait_for_it.sh"", "postgres:5432", "npm", "start"]
+      command: ["npm", "start"]
