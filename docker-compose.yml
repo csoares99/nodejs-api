@@ -11,11 +11,19 @@ services:
         - ".:/usr/app/data"
       ports: 
         - 5432:5432
+        
    web:
       container_name: first-api
+      environment: 
+        - DB_HOST=postgres
+        - DB_DATABASE=first
+        - DB_USER=first
+        - DB_PASSWORD=first123
       build: .
       ports:
        - "3000:3000"
+      links:
+       - postgres
       volumes:
        - .:/usr/app
       depends_on:

@@ -1,13 +1,15 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import {Request, Response} from "express";
+import { Request, Response } from "express";
 import { ApiRoutes } from "./src/api-routes";
+import { connect } from "./src/db";
 
 class App {
   public app: express.Application;
   public router;
 
   constructor() {
+    connect();
     this.app = express();
     this.router = express.Router();
     this.middleware();

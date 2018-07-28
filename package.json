@@ -11,6 +11,7 @@
   "author": "cesar soares",
   "license": "ISC",
   "dependencies": {
+    "@types/knex": "^0.14.18",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "express": "^4.16.3"
