@@ -4,9 +4,9 @@ module.exports = {
         version: '7.2',
         connection: {
             host: process.env.DB_HOST,
-            database: process.env.DB_DATABASE,
-            user: process.env.DB_USER,
-            password: process.env.DB_PASSWORD
+            database: process.env.DB_DATABASE || 'first',
+            user: process.env.DB_USER || 'first',
+            password: process.env.DB_PASSWORD || 'first123'
         },
         pool: {
             min: 1,
@@ -14,7 +14,10 @@ module.exports = {
         },
         migrations: {
             tableName: 'migrations',
-            directory: 'src/server/db/migrations'
+            directory: 'src/db/migrations'
+        },
+        seeds: {
+            directory: 'src/db/seeds'
         }
     }
 }

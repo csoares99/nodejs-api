@@ -17,8 +17,11 @@ export async function connect() {
         },
         migrations: {
             tableName: 'migrations',
-            directory: 'src/server/db/migrations'
+            directory: 'src/db/migrations'
         },
+        seeds: {
+            directory: 'src/db/seeds'
+        }
     });
 
     Model.knex(knexInstance);

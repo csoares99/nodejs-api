@@ -1,5 +1,5 @@
 import * as Express from "express";
-import * as AdminRoutes from "./server/admin/route";
+import * as AdminRoutes from "./server/modules/admin/index";
 
 const router = Express.Router();
 

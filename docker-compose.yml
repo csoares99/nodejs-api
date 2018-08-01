@@ -28,4 +28,6 @@ services:
        - .:/usr/app
       depends_on:
        - postgres
+      links:
+       - postgres
       command: ["npm", "start"]
