@@ -4,9 +4,9 @@
   "description": "an api for studies",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' server.ts",
-    "prod-start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node --fast' server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' server.ts && yarn migrate",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "yarn knex migrate:latest && yarn knex seed:run"
   },
   "author": "cesar soares",
   "license": "ISC",
@@ -17,6 +17,9 @@
     "compression": "^1.7.3",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
+    "knex": "^0.15.2",
+    "objection": "^1.2.2",
+    "pg": "^7.4.3",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

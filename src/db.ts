@@ -27,8 +27,13 @@ export async function connect() {
     Model.knex(knexInstance);
 
     try {
+        console.log("database migrate");
+        console.log("**************************************************************");
         await knexInstance.migrate.latest();
-        console.log("database compled");
+        console.log("database seed");
+        console.log("**************************************************************");
+        await knexInstance.seed.run();
+        console.log("database complete");
         console.log("**************************************************************");
     } catch (err) {
         console.log(err);

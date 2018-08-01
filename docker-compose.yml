@@ -30,4 +30,5 @@ services:
        - postgres
       links:
        - postgres
+      
       command: ["npm", "start"]
