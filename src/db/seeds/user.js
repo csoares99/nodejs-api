@@ -8,7 +8,7 @@ exports.seed = async function(knex, Promise) {
     email: 'cesar_augustoiv@hotmail.com',
     password: 'Augusto99',
     active: true,
-    role: 'admin',
+    roles: 'admin',
     created_at: new Date(),
     updated_at: new Date()
   };

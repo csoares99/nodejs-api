@@ -4,7 +4,7 @@ import * as uuid from 'uuid';
 export class User extends Model {
     public id: string;
     public name: string;
-    public role: string;
+    public roles: string;
     public password: string;
     public email: string;
     public active: boolean;

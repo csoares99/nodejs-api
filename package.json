@@ -4,13 +4,15 @@
   "description": "an api for studies",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' server.ts && yarn migrate",
+    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "yarn knex migrate:latest && yarn knex seed:run"
   },
   "author": "cesar soares",
   "license": "ISC",
   "dependencies": {
+    "@types/bcryptjs": "^2.4.1",
+    "@types/jsonwebtoken": "^7.2.8",
     "@types/knex": "^0.14.18",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
